@@ -1,0 +1,28 @@
+[user]
+	email = michael.barker@lmax.com
+
+[color]
+    diff = auto
+    status = auto
+    branch = auto
+
+[apply]
+    whitespace = fix
+
+[svn]
+    rmdir = true
+
+[gc]
+    pruneexpire = 3 days ago
+
+[alias]
+    hackprofile = config user.email \"mikeb01@gmail.com\"
+    locate = "!locate() { git ls-files \"*$1*\"; }; locate"
+    co = checkout
+    ci = commit
+    st = status
+    hist = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative
+    hist-all = log --graph --format=format:'%C(bold blue)%h%C(reset) - %C(bold green)(%ar)%C(reset) %C(white)%s%C(reset) %C(bold white)— %an%C(reset)%C(bold yellow)%d%C(reset)' --abbrev-commit --date=relative --all
+    ltags = log --graph --decorate=full
+    otags = log --graph --decorate=full --oneline
+
